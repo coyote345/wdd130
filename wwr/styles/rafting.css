@@ -1,0 +1,741 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+:root {
+    --primary-color: darkslategray;
+    --secondary-color: #27764a;   
+    --accent1-color: #8b670a;    
+    --accent2-color: #f5f0e8;
+    --heading-font: "Times New Roman", "Georgia", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+ 
+body {
+    font-family: var(--body-font);
+    color: var(--primary-color);
+    background-color: var(--accent2-color);
+}
+ 
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+ 
+header {
+    background-color: var(--secondary-color);
+    color: #fff;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+ 
+header img {
+    width: 120px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+ 
+nav a {
+    color: #fff;                         
+    text-decoration: none;
+    font-family: var(--body-font);
+    font-weight: bold;
+}
+ 
+nav a:hover {
+    color: #ffe082;                       
+}
+ 
+h1,
+h2 {
+    font-family: var(--heading-font);
+    font-style: italic;
+}
+ 
+h1 {
+    color: #fff;                      
+}
+ 
+h2 {
+    color: var(--accent1-color);         
+}
+
+.hero {
+    position: relative;
+}
+ 
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+ 
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.9;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+ 
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 360px;
+    padding: 16px;
+    background-color: var(--accent2-color);
+    opacity: 0.9;
+}
+ 
+.hero article img {
+    float: right;
+    width: 160px;
+    height: auto;
+}
+
+#history {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: center;
+}
+ 
+.history-text h2 {
+    margin-bottom: 0.75rem;
+}
+ 
+.history-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+ 
+#adventures {
+    padding: 2rem;
+    text-align: center;
+}
+ 
+#adventures h2 {
+    margin-bottom: 1rem;
+}
+ 
+.adventures-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+ 
+.adventures-grid figure {
+    flex: 1;
+    margin: 0;
+}
+ 
+.adventures-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+ 
+.adventures-grid figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--primary-color);    
+}
+ 
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 16px;
+    color: #fff;         
+    width: 840px;
+    margin: 0 auto;
+}
+ 
+.socialmedia {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+ 
+.socialmedia a {
+    text-decoration: none;
+}
+ 
+.socialmedia img {
+    width: 40px;
+    height: 40px;
+}
+
+/* --- Contact Info Section --- */
+#contact-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.company-details {
+    text-align: center;
+}
+
+.company-details h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.contact-list li {
+    line-height: 1.7;
+    text-align: center;
+}
+
+.contact-list a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* --- Map + Form Side by Side --- */
+.map-and-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    display: block;
+    border-radius: 6px;
+}
+
+/* --- Contact Form --- */
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label,
+.form-group legend {
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--body-font);
+    width: 100%;
+    background-color: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+fieldset.form-group {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    cursor: pointer;
+    padding: 0.2rem 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.submit-btn {
+    align-self: stretch;
+    padding: 0.75rem 2rem;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--body-font);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    background-color: #1a5c38;
+}
+
+/* --- Team Section --- */
+#team {
+    background-color: #ece7de;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+#team h2 {
+    margin-bottom: 2rem;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.team-grid figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin: 0;
+}
+
+.team-grid img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.75rem;
+}
+
+.team-grid figcaption {
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* =============================================
+   HOME PAGE STYLES
+   ============================================= */
+
+/* --- Newsletter Section --- */
+#newsletter {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+#newsletter h2 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+#newsletter p {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.newsletter-fields {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.newsletter-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex: 1;
+    text-align: left;
+}
+
+.newsletter-field label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.newsletter-field input {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--body-font);
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    width: 100%;
+}
+
+.newsletter-field input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-field input:focus {
+    outline: 2px solid #ffe082;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* --- Call to Action Banner --- */
+#cta-trips {
+    background-color: var(--accent1-color);
+    padding: 2.5rem 2rem;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.cta-content p {
+    color: #fff;
+    max-width: 560px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: #fff;
+    color: var(--accent1-color);
+    font-family: var(--body-font);
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* --- Home Grid --- */
+#home-grid {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.grid-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.grid-card-reverse {
+    direction: rtl;
+}
+
+.grid-card-reverse > * {
+    direction: ltr;
+}
+
+.grid-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.grid-card-text h2 {
+    margin-bottom: 0.75rem;
+}
+
+.grid-card-text p {
+    line-height: 1.7;
+}
+
+/* =============================================
+   TRIPS PAGE STYLES
+   ============================================= */
+
+/* --- Trips Inline CTA Banner --- */
+#trips-cta {
+    background-color: var(--accent2-color);
+    border-left: 4px solid var(--secondary-color);
+    padding: 1rem 2rem;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+}
+
+.cta-inline-link {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.cta-inline-link:hover {
+    color: var(--accent1-color);
+}
+
+/* --- Trip Descriptions --- */
+#trip-descriptions {
+    padding: 2rem;
+}
+
+#trip-descriptions > h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.trip-card {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.trip-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.trip-card-body {
+    padding: 1rem 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex: 1;
+}
+
+.trip-card-body h3 {
+    font-family: var(--heading-font);
+    font-style: italic;
+    color: var(--accent1-color);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.trip-card-body p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--primary-color);
+}
+
+.trip-details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.85rem;
+    border-top: 1px solid #eee;
+    padding-top: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: auto;
+}
+
+/* Difficulty badges on trip cards */
+.trip-level {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    width: fit-content;
+}
+
+.level-easy {
+    background-color: #d4edda;
+    color: #1a5c38;
+}
+
+.level-moderate {
+    background-color: #fff3cd;
+    color: #8b670a;
+}
+
+.level-hard {
+    background-color: #f8d7da;
+    color: #7b2020;
+}
+
+/* --- Trips Table --- */
+#trips-table-section {
+    padding: 2rem;
+    background-color: #ece7de;
+}
+
+#trips-table-section > h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.trips-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.trips-table thead {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.trips-table th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-family: var(--body-font);
+    font-weight: bold;
+}
+
+.trips-table td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid #e5e0d8;
+    vertical-align: middle;
+}
+
+.trips-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.trips-table tbody tr:nth-child(even) {
+    background-color: #f7f4ef;
+}
+
+/* Table difficulty badges */
+.badge-easy {
+    background-color: #d4edda;
+    color: #1a5c38;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.badge-moderate {
+    background-color: #fff3cd;
+    color: #8b670a;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.badge-hard {
+    background-color: #f8d7da;
+    color: #7b2020;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.badge-custom {
+    background-color: #e2e3e5;
+    color: #383d41;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* --- Trips Bottom CTA --- */
+#trips-bottom-cta {
+    background-color: var(--primary-color);
+    padding: 3rem 2rem;
+}
+
+#trips-bottom-cta .cta-content h2 {
+    color: #fff;
+}
+
+#trips-bottom-cta .cta-content p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+#trips-bottom-cta .cta-button {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+#trips-bottom-cta .cta-button:hover,
+#trips-bottom-cta .cta-button:focus {
+    background-color: #1a5c38;
+    color: #fff;
+}
