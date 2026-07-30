@@ -113,21 +113,37 @@ h2 {
 
 #history {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "heading heading heading"
+        "text1 image text2";
     gap: 2rem;
     padding: 2rem;
     align-items: center;
 }
  
-.history-text h2 {
-    margin-bottom: 0.75rem;
+#history h2 {
+    grid-area: heading;
+    text-align: center;
 }
- 
+
+.history-text {
+    grid-area: text1;
+}
+
+.history-image {
+    grid-area: image;
+}
+
+.history-text2 {
+    grid-area: text2;
+}
+
 .history-image img {
     width: 100%;
     border-radius: 8px;
 }
- 
+
 #adventures {
     padding: 2rem;
     text-align: center;
