@@ -22,14 +22,15 @@
         </nav>
     </header>   
 
-    <form action="box">
+    <main>
+        <form action="box">
         <section id="contact-info">
 
             <div class="company-details">
                 <h1>Riverbend Rafting Co.</h1>
                 <ul class="contact-list">
-                    <li>301 Camino de la Merced<br>Taos, NM 87571</li>
-                    <li><a href="tel:+15755550198">(575) 555-0142</a></li>
+                    <li>1234 River Run Road<br>Grand Junction, CO 81501</li>
+                    <li><a href="tel:+15755550142">(575) 555-0142</a></li>
                     <li><a href="tel:+15755550198">(575) 555-0198</a></li>
                     <li><a href="mailto:contact_us@riverbend-rafting.com">contact_us@riverbend-rafting.com</a></li>
                 </ul>
@@ -39,7 +40,7 @@
 
                 <div class="map-container">
                     <iframe
-                        src="https://www.google.com/maps?q=36.4072134,-105.5733788&output=embed"
+                        src="https://maps.app.goo.gl/8fA4PkZZHG5aU3jVA"
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
@@ -47,43 +48,77 @@
                     </iframe>
                 </div>
 
+                <div class="form-wrapper">
 
-        <!-- ADVENTURES section — required content -->
-        <section id="adventures">
-            <h2>Adventure Awaits You!</h2>
-            <div class="adventures-grid">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+
+                    <fieldset class="form-group">
+                        <legend>Message Purpose</legend>
+                        <label class="radio-label">
+                            <input type="radio" name="purpose" value="general" required>
+                            General Inquiry
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="purpose" value="reservation">
+                            Reservation Question
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="purpose" value="suggestion">
+                            Website Suggestion
+                        </label>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Type here..." required></textarea>
+                    </div>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="newsletter" value="subscribe">
+                        Please subscribe me to the monthly newsletter
+                    </label>
+
+                    <button type="submit" class="submit-btn">Get in Touch!</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="team">
+            <h2>We Are Here to Serve You</h2>
+            <div class="team-grid">
 
                 <figure>
-                    <img src="images/1Class_IV_Rapids.jpg" alt="Challenge the Taos Box (Class IV Rapids)">
-                    <figcaption>Challenge the Taos Box (Class IV Rapids)</figcaption>
+                    <img src="images/employee1.jpg" alt="Maria Gonzalez, Head Guide">
+                    <figcaption>Maria Gonzalez<br><span>Head Guide</span></figcaption>
                 </figure>
 
                 <figure>
-                    <img src="images/2Class_II-III_Rapids.jpg" alt="(Class II-III Rapids)">
-                    <figcaption>Paddle the Racecourse (Class II-III Rapids)</figcaption>
+                    <img src="images/employee2.jpg" alt="James Rivera, Safety Officer">
+                    <figcaption>James Rivera<br><span>Safety Officer</span></figcaption>
                 </figure>
 
                 <figure>
-                    <img src="images/3solo_kayak_rapids.jpg" alt="Solo Kayaking">
-                    <figcaption>Try Solo Kayaking</figcaption>
-                </figure>
-
-                <figure>
-                    <img src="images/4rio_grande_climbers_wide.jpg" alt="Rock Climbing">
-                    <figcaption>Combine Rafting with Rock Climbing (Rock & Raft)</figcaption>
-                </figure>
-
-                <figure>
-                    <img src="images/5rio_grande_golden_hour.jpg" alt="Take a Scenic Float and Swim">
-                    <figcaption>Take a Scenic Float and Swim</figcaption>
+                    <img src="images/employee3.jpg" alt="Priya Patel, Reservations Manager">
+                    <figcaption>Priya Patel<br><span>Reservations Manager</span></figcaption>
                 </figure>
 
             </div>
         </section>
-
+        </form>
     </main>
 
-    <!-- FOOTER: Flex — copyright left, social icons right -->
+    <!-- FOOTER -->
     <footer>
         <p>©️2026 | Riverbend Rafting Co. | Fernando Munoz</p>
         <nav class="socialmedia">
