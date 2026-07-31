@@ -207,3 +207,41 @@ footer {
     width: 40px;
     height: 40px;
 }
+
+
+/* --- Contact Info Section --- */
+#contact-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.company-details {
+    text-align: center;
+}
+
+.company-details h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.contact-list li {
+    line-height: 1.7;
+    text-align: center;
+}
+
+.contact-list a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
