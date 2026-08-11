@@ -378,11 +378,9 @@ fieldset.form-group {
 }
 
 
-/* =============================================
-   HOME PAGE STYLES
-   ============================================= */
+/* --- HOME PAGE STYLING --- */
 
-/* --- Newsletter Section --- */
+
 #newsletter {
     background-color: var(--secondary-color);
     color: #fff;
@@ -449,7 +447,6 @@ fieldset.form-group {
     background-color: rgba(255, 255, 255, 0.25);
 }
 
-/* --- Call to Action Banner --- */
 #cta-trips {
     background-color: var(--accent1-color);
     padding: 2.5rem 2rem;
@@ -529,11 +526,9 @@ fieldset.form-group {
     line-height: 1.7;
 }
 
-/* =============================================
-   TRIPS PAGE STYLES
-   ============================================= */
+/* --- TRIPS PAGE STYLING --- */
 
-/* --- Trips Inline CTA Banner --- */
+
 #trips-cta {
     background-color: var(--accent2-color);
     border-left: 4px solid var(--secondary-color);
@@ -552,7 +547,6 @@ fieldset.form-group {
     color: var(--accent1-color);
 }
 
-/* --- Trip Descriptions --- */
 #trip-descriptions {
     padding: 2rem;
 }
@@ -619,7 +613,6 @@ fieldset.form-group {
     margin-top: auto;
 }
 
-/* Difficulty badges on trip cards */
 .trip-level {
     display: inline-block;
     font-size: 0.75rem;
@@ -646,7 +639,6 @@ fieldset.form-group {
     color: #7b2020;
 }
 
-/* --- Trips Table --- */
 #trips-table-section {
     padding: 2rem;
     background-color: #ece7de;
@@ -696,7 +688,6 @@ fieldset.form-group {
     background-color: #f7f4ef;
 }
 
-/* Table difficulty badges */
 .badge-easy {
     background-color: #d4edda;
     color: #1a5c38;
@@ -736,7 +727,6 @@ fieldset.form-group {
     font-weight: bold;
 }
 
-/* --- Trips Bottom CTA --- */
 #trips-bottom-cta {
     background-color: var(--primary-color);
     padding: 3rem 2rem;
